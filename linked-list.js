@@ -26,6 +26,18 @@ class LinkedList {
         }
         this.head.nextNode = temp
     }
+
+    size() {
+        let pointer = this.head
+        let size = 0
+        while(pointer.nextNode !== null) {
+            size++
+            pointer = pointer.nextNode
+        }
+        return size
+    }
+
+
 }
     
 
@@ -47,4 +59,5 @@ list.append("three")
 console.log(list)
 list.prepend("beforeone")
 console.log(list)
+console.log(list.size())
 
