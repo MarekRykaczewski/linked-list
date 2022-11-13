@@ -41,6 +41,14 @@ class LinkedList {
         return this.head
     }
 
+    tails() {
+        let pointer = this.head
+        while(pointer.nextNode !== null) {
+            pointer = pointer.nextNode
+        }
+        return pointer
+    }
+
 }
     
 
@@ -64,4 +72,5 @@ list.prepend("beforeone")
 console.log(list)
 console.log(list.size())
 console.log(list.heads())
+console.log(list.tails())
 
