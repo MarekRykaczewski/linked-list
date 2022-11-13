@@ -17,6 +17,15 @@ class LinkedList {
         tail.nextNode = node
         return this.head   
     }
+
+    prepend(value) {
+        let node = new Node(value, this.head.nextNode)
+        let temp = this.head
+        if (this.head) {
+            this.head = node
+        }
+        this.head.nextNode = temp
+    }
 }
     
 
@@ -35,5 +44,7 @@ list.append("one")
 list.append("two")
 // console.log(list)
 list.append("three")
+console.log(list)
+list.prepend("beforeone")
 console.log(list)
 
