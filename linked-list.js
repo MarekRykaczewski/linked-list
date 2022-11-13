@@ -28,15 +28,18 @@ class LinkedList {
     }
 
     size() {
-        let pointer = this.head
-        let size = 0
+        let pointer = this.head;
+        let size = 0;
         while(pointer.nextNode !== null) {
             size++
-            pointer = pointer.nextNode
+            pointer = pointer.nextNode;
         }
-        return size
+        return size;
     }
 
+    heads() {
+        return this.head
+    }
 
 }
     
@@ -60,4 +63,5 @@ console.log(list)
 list.prepend("beforeone")
 console.log(list)
 console.log(list.size())
+console.log(list.heads())
 
