@@ -59,6 +59,15 @@ class LinkedList {
         return pointer
     }
 
+    pop() {
+        let pointer = this.head
+        while(pointer.nextNode.nextNode !== null) { // getting second to last node
+            pointer = pointer.nextNode
+        }
+       pointer.nextNode = null
+
+    }
+
 }
     
 
@@ -84,4 +93,7 @@ console.log(list.size())
 console.log(list.heads())
 console.log(list.tails())
 console.log(list.at(2))
+list.pop()
+console.log(list)
+
 
