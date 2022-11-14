@@ -49,6 +49,16 @@ class LinkedList {
         return pointer
     }
 
+    at(index) {
+        let count = 0
+        let pointer = this.head
+        while(count !== index) {
+            pointer = pointer.nextNode
+            count++
+        }
+        return pointer
+    }
+
 }
     
 
@@ -73,4 +83,5 @@ console.log(list)
 console.log(list.size())
 console.log(list.heads())
 console.log(list.tails())
+console.log(list.at(2))
 
