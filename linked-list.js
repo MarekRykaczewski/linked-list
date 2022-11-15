@@ -92,6 +92,16 @@ class LinkedList {
         return false
     }
 
+    toString() {
+        let pointer = this.head
+        let output = `( ${this.head.value} ) -> `
+        while(pointer.nextNode !== null) { // same as append and size
+            pointer = pointer.nextNode
+            output = output + `( ${pointer.value} ) -> `
+        }
+        return output + `null`
+    }
+
 }
     
 
@@ -112,15 +122,16 @@ list.append("two")
 list.append("three")
 console.log(list)
 list.prepend("beforeone")
-// console.log(list)
-// console.log(list.size())
-// console.log(list.heads())
-// console.log(list.tails())
-// console.log(list.at(2))
-// list.pop()
-// console.log(list)
-// console.log(list.contains("two"))
-// console.log(list.contains("four"))
+console.log(list)
+console.log(list.size())
+console.log(list.heads())
+console.log(list.tails())
+console.log(list.at(2))
+list.pop()
+console.log(list)
+console.log(list.contains("two"))
+console.log(list.contains("four"))
 console.log(list.find("two"))
+console.log(list.toString())
 
 
